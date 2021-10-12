@@ -1,0 +1,75 @@
+@forward './base';
+// @use './fonts' as *;
+// @use './colors' as *;
+@use './fonts'as *;
+@use './colors'as *;
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+
+    .left {
+        width: 100%;
+
+    
+        h1 {
+            font-family: $Quicksand;
+            font-weight: 400;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.btn {
+    text-decoration: none;
+    color: $White;
+    background: $Violet;
+    padding: 0.7em 3em;
+    font-family: $Lato;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+@media (min-width: 1440px) {
+    .row {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        height: 100vh;
+        width: 100%;
+    
+        .left {
+            width: 50%;
+    
+            h1 {
+                font-family: $Quicksand;
+                font-weight: 400;
+                width: 500px;
+                margin-bottom: 15px;
+            }
+        }
+    
+        .right {
+    
+            img {
+                width: 100%;
+                pointer-events: none;
+                z-index: -2;
+            }
+        }
+    }
+    
+}
